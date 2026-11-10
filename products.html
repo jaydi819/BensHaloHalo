@@ -1,466 +1,548 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Matcha Menu | yUP's The Matcha House</title>
+  <title>Our Menu | Ben's Halo-Halo Lucena</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 
-  <header class="header">
-    <a class="logo" href="index.html">
-      <span class="logo-icon">🍵</span>
-      <span>yUP's <small>The Matcha House</small></span>
-    </a>
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-icon">🍨</span>
+    <span>Ben's <small>HALO-HALO LUCENA</small></span>
+  </a>
 
-    <button class="menu-toggle" aria-label="Open navigation">☰</button>
+  <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a class="active" href="products.html">Our Menu</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a class="current" href="products.html">Our Menu</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <main>
+<main class="menu-main">
 
-    <section class="page-hero">
-      <span class="eyebrow">SOMETHING GREEN, SOMETHING GOOD</span>
-      <h1>Our Matcha Menu</h1>
-      <p>Discover your next favorite drink, from classic matcha to fruity and creamy creations.</p>
-      <div class="breadcrumb">
-        <a href="index.html">Home</a> / Our Menu
-      </div>
-    </section>
+  <section class="page-banner">
+    <span class="eyebrow">MADE FOR YOUR CRAVINGS</span>
+    <h1>Our <span>Menu</span></h1>
+    <p>Choose your favorites and add them to your cart.</p>
+  </section>
 
-    <section class="menu-section section">
+  <section class="menu-tools">
+    <label class="search-wrap">
+      <span>⌕</span>
+      <input id="menuSearch" type="search"
+        placeholder="Search food or drinks..."
+        aria-label="Search menu">
+    </label>
 
-      <div class="menu-toolbar">
-        <div>
-          <span class="eyebrow">EXPLORE OUR DRINKS</span>
-          <h2>Choose Your Favorite</h2>
-          <p>Find a flavor that matches your mood. 🍵</p>
+    <button class="button button-primary cart-open"
+      id="openCart" type="button">
+      🛒 Cart <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </section>
+
+  <nav class="category-tabs">
+    <a href="#coolers">Coolers</a>
+    <a href="#beverages">Beverages</a>
+    <a href="#rice-meals">Rice Meals</a>
+    <a href="#pasta">Pasta</a>
+    <a href="#pika-pika">Pika-Pika & Sandwiches</a>
+  </nav>
+
+  <!-- COOLERS -->
+  <section class="menu-category" id="coolers">
+    <h2>Coolers</h2>
+    <div class="product-grid">
+
+      <article class="product-card" data-name="Original Halo-halo">
+        <div class="product-art">
+          <img src="original-halo-halo.jpg" alt="Original Halo-halo">
         </div>
+        <div class="product-info">
+          <h3>Original Halo-halo</h3>
+          <p>Our classic refreshing halo-halo.</p>
+          <strong>₱110</strong>
+          <button class="button button-primary add-to-cart" data-id="1">Add to Cart</button>
+        </div>
+      </article>
 
-        <input
-          type="search"
-          id="menuSearch"
-          class="search-input"
-          placeholder="Search a drink..."
-          aria-label="Search drinks"
-        >
-      </div>
+      <article class="product-card" data-name="Salty Summer">
+        <div class="product-art">
+          <img src="salty-summer.jpg" alt="Salty Summer">
+        </div>
+        <div class="product-info">
+          <h3>Salty Summer</h3>
+          <p>A cool and creamy summer treat.</p>
+          <strong>₱120</strong>
+          <button class="button button-primary add-to-cart" data-id="2">Add to Cart</button>
+        </div>
+      </article>
 
-      <div class="product-grid" id="productGrid">
+      <article class="product-card" data-name="Spicy Winter">
+        <div class="product-art">
+          <img src="spicy-winter.jpg" alt="Spicy Winter">
+        </div>
+        <div class="product-info">
+          <h3>Spicy Winter</h3>
+          <p>A special cold dessert for your cravings.</p>
+          <strong>₱120</strong>
+          <button class="button button-primary add-to-cart" data-id="3">Add to Cart</button>
+        </div>
+      </article>
 
-   
-        <article class="product-card" data-name="Banana Matcha Latte">
-          <div class="product-image">
-            <img src="bananalatte.jpeg" alt="Banana Matcha Latte">
-            <span class="product-tag">Fruity</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Banana Matcha Latte</h3>
-              <span class="price">₱255</span>
-            </div>
-            <p>A delightful combination of earthy matcha and sweet banana flavors, creating a smooth and refreshing drink for your matcha break.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+      <article class="product-card" data-name="Macapuno Con Yelo">
+        <div class="product-art">
+          <img src="macapuno-con-yelo.jpg" alt="Macapuno Con Yelo">
+        </div>
+        <div class="product-info">
+          <h3>Macapuno Con Yelo</h3>
+          <p>Sweet macapuno with refreshing shaved ice.</p>
+          <strong>₱140</strong>
+          <button class="button button-primary add-to-cart" data-id="4">Add to Cart</button>
+        </div>
+      </article>
 
-        <article class="product-card" data-name="Banana Pudding Matcha">
-          <div class="product-image">
-            <img src="bananapudding.jpeg" alt="Banana Pudding Matcha">
-            <span class="product-tag">Creamy</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Banana Pudding Matcha</h3>
-              <span class="price">₱295</span>
-            </div>
-            <p>A dessert-inspired matcha drink that brings together banana sweetness and creamy pudding-style flavors for a delightful treat.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+      <article class="product-card" data-name="Banana Con Yelo">
+        <div class="product-art">
+          <img src="banana-con-yelo.jpg" alt="Banana Con Yelo">
+        </div>
+        <div class="product-info">
+          <h3>Banana Con Yelo</h3>
+          <p>Banana and ice in a sweet combination.</p>
+          <strong>₱110</strong>
+          <button class="button button-primary add-to-cart" data-id="5">Add to Cart</button>
+        </div>
+      </article>
 
-        <article class="product-card" data-name="Cheese Cloud Matcha">
-          <div class="product-image">
-            <img src="c.cloud.jpeg" alt="Cheese Cloud Matcha">
-            <span class="product-tag">Creamy</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Cheese Cloud Matcha</h3>
-              <span class="price">₱275</span>
-            </div>
-            <p>A matcha drink with a cheese-inspired creamy cloud, offering a contrast of earthy tea flavor and rich, smooth topping.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+      <article class="product-card" data-name="Langka Con Yelo">
+        <div class="product-art">
+          <img src="langka-con-yelo.jpg" alt="Langka Con Yelo">
+        </div>
+        <div class="product-info">
+          <h3>Langka Con Yelo</h3>
+          <p>Sweet jackfruit served with shaved ice.</p>
+          <strong>₱120</strong>
+          <button class="button button-primary add-to-cart" data-id="6">Add to Cart</button>
+        </div>
+      </article>
 
-        <article class="product-card" data-name="Coconut Matcha Cloud">
-          <div class="product-image">
-            <img src="coconut.jpeg" alt="Coconut Matcha Cloud">
-            <span class="product-tag">Specialty</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Coconut Matcha Cloud</h3>
-              <span class="price">₱255</span>
-            </div>
-            <p>A tropical-inspired combination of matcha and coconut flavors, made for those who enjoy a creamy drink with a refreshing twist.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+      <article class="product-card" data-name="Mais Con Yelo">
+        <div class="product-art">
+          <img src="mais-con-yelo.jpg" alt="Mais Con Yelo">
+        </div>
+        <div class="product-info">
+          <h3>Mais Con Yelo</h3>
+          <p>Sweet corn with milk and crushed ice.</p>
+          <strong>₱110</strong>
+          <button class="button button-primary add-to-cart" data-id="7">Add to Cart</button>
+        </div>
+      </article>
 
-        <article class="product-card" data-name="Dirty Matcha Latte">
-          <div class="product-image">
-            <img src="dirty.jpeg" alt="Dirty Matcha Latte">
-            <span class="product-tag">Matcha and Coffee</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Dirty Matcha Latte</h3>
-              <span class="price">₱255</span>
-            </div>
-            <p>A bold combination of earthy matcha and coffee-inspired flavors for a drink with a distinctive taste.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+    </div>
+  </section>
 
-        <article class="product-card" data-name="Earth Day Matcha">
-          <div class="product-image">
-            <img src="earth.jpeg" alt="Earth Day Matcha">
-            <span class="product-tag">Specialty</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Earth Day Matcha</h3>
-              <span class="price">₱255</span>
-            </div>
-            <p>A green matcha creation with a nature-inspired name, perfect for anyone looking to explore a distinctive drink option.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+  <!-- BEVERAGES -->
+  <section class="menu-category" id="beverages">
+    <h2>Beverages</h2>
+    <div class="product-grid">
 
-        <article class="product-card" data-name="Egg Matcha">
-          <div class="product-image">
-            <img src="egg.jpeg" alt="Egg Matcha">
-            <span class="product-tag">Specialty</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Egg Matcha</h3>
-              <span class="price">₱235</span>
-            </div>
-            <p>A specialty drink for curious matcha lovers who want to try a different combination beyond the usual matcha latte.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+      <article class="product-card" data-name="House Blend Iced Tea">
+        <div class="product-art">
+          <img src="house-blend-iced-tea.jpg" alt="House Blend Iced Tea">
+        </div>
+        <div class="product-info">
+          <h3>House Blend Iced Tea</h3>
+          <p>Refreshing house-blended iced tea.</p>
+          <strong>₱60</strong>
+          <button class="button button-primary add-to-cart" data-id="8">Add to Cart</button>
+        </div>
+      </article>
 
-        <article class="product-card" data-name="Einspanner Matcha">
-          <div class="product-image">
-            <img src="einspanner.jpeg" alt="Einspanner Matcha">
-            <span class="product-tag">Creamy</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Einspanner Matcha</h3>
-              <span class="price">₱275</span>
-            </div>
-            <p>A matcha take on the creamy Einspänner-style drink, combining the earthy character of green tea with a rich, cloud-like topping.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+      <article class="product-card" data-name="Cucumber Lemonade">
+        <div class="product-art">
+          <img src="cucumber-lemonade.jpg" alt="Cucumber Lemonade">
+        </div>
+        <div class="product-info">
+          <h3>Cucumber Lemonade</h3>
+          <p>A refreshing mix of cucumber and lemon.</p>
+          <strong>₱60</strong>
+          <button class="button button-primary add-to-cart" data-id="9">Add to Cart</button>
+        </div>
+      </article>
 
-        <article class="product-card" data-name="Iced Matcha Coco">
-          <div class="product-image">
-            <img src="coco.jpeg" alt="Iced Matcha Coco">
-            <span class="product-tag">Iced</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Iced Matcha Coco</h3>
-              <span class="price">₱245</span>
-            </div>
-            <p>A chilled matcha and coconut-inspired drink with a refreshing tropical feel, ideal for a relaxing drink break.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+      <article class="product-card" data-name="Orange Juice">
+        <div class="product-art">
+          <img src="orange-juice.jpg" alt="Orange Juice">
+        </div>
+        <div class="product-info">
+          <h3>Orange Juice</h3>
+          <p>Sweet and refreshing orange juice.</p>
+          <strong>₱60</strong>
+          <button class="button button-primary add-to-cart" data-id="10">Add to Cart</button>
+        </div>
+      </article>
 
-        <article class="product-card" data-name="London Fog Matcha">
-          <div class="product-image">
-            <img src="london.jpeg" alt="London Fog Matcha">
-            <span class="product-tag">Tea Blend</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>London Fog Matcha</h3>
-              <span class="price">₱255</span>
-            </div>
-            <p>A London Fog-inspired matcha creation that brings together green tea character and the idea of a comforting, aromatic tea drink.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+    </div>
+  </section>
 
-        <article class="product-card" data-name="Mango Matcha Latte">
-          <div class="product-image">
-            <img src="mango.jpg" alt="Mango Matcha Latte">
-            <span class="product-tag">Fruity</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Mango Matcha Latte</h3>
-              <span class="price">₱255</span>
-            </div>
-            <p>A tropical-inspired matcha latte that pairs earthy green tea notes with the sweet, fruity character of mango.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+  <!-- RICE MEALS -->
+  <section class="menu-category" id="rice-meals">
+    <h2>Rice Meals</h2>
+    <div class="product-grid">
 
-        <article class="product-card" data-name="Matcha Jasmine Cloud">
-          <div class="product-image">
-            <img src="jasmine.jpg" alt="Matcha Jasmine Cloud">
-            <span class="product-tag">Floral</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Matcha Jasmine Cloud</h3>
-              <span class="price">₱255</span>
-            </div>
-            <p>A floral-inspired matcha drink with a soft cloud-style presentation, offering a lovely option for fans of tea and delicate flavors.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+      <article class="product-card" data-name="BBQ Ribs">
+        <div class="product-art">
+          <img src="bbq-ribs.jpg" alt="BBQ Ribs">
+        </div>
+        <div class="product-info">
+          <h3>BBQ Ribs</h3>
+          <p>Tender ribs coated with barbecue sauce.</p>
+          <strong>₱220</strong>
+          <button class="button button-primary add-to-cart" data-id="11">Add to Cart</button>
+        </div>
+      </article>
 
-        <article class="product-card" data-name="Matcha Latte">
-          <div class="product-image">
-            <img src="matcha.jpg" alt="Matcha Latte">
-            <span class="product-tag">Classic Favorite</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Matcha Latte</h3>
-              <span class="price">₱235</span>
-            </div>
-            <p>A classic matcha favorite featuring the earthy taste of green tea in a latte-style drink, suitable for everyday enjoyment.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+      <article class="product-card" data-name="Chicken BBQ">
+        <div class="product-art">
+          <img src="chicken-bbq.jpg" alt="Chicken BBQ">
+        </div>
+        <div class="product-info">
+          <h3>Chicken BBQ</h3>
+          <p>Grilled chicken with flavorful barbecue glaze.</p>
+          <strong>₱175</strong>
+          <button class="button button-primary add-to-cart" data-id="12">Add to Cart</button>
+        </div>
+      </article>
 
-        <article class="product-card" data-name="Matcha Lemonade">
-          <div class="product-image">
-            <img src="lemonade.jpg" alt="Matcha Lemonade">
-            <span class="product-tag">Refreshing</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Matcha Lemonade</h3>
-              <span class="price">₱235</span>
-            </div>
-            <p>A refreshing matcha and lemonade-inspired combination, balancing earthy tea notes with a bright citrus-style flavor profile.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+      <article class="product-card" data-name="Braised Beef">
+        <div class="product-art">
+          <img src="braised-beef.jpg" alt="Braised Beef">
+        </div>
+        <div class="product-info">
+          <h3>Braised Beef</h3>
+          <p>Soft and savory braised beef served with rice.</p>
+          <strong>₱120</strong>
+          <button class="button button-primary add-to-cart" data-id="13">Add to Cart</button>
+        </div>
+      </article>
 
-        <article class="product-card" data-name="Matcha Tiramisu Cloud Latte">
-          <div class="product-image">
-            <img src="tiramisu.jpg" alt="Matcha Tiramisu Cloud Latte">
-            <span class="product-tag">Dessert-Inspired</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Matcha Tiramisu Cloud Latte</h3>
-              <span class="price">₱295</span>
-            </div>
-            <p>A dessert-inspired matcha latte with tiramisu-style character and a cloud-like finish, made for those who enjoy indulgent flavors.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+      <article class="product-card" data-name="Beef Tapa">
+        <div class="product-art">
+          <img src="beef-tapa.jpg" alt="Beef Tapa">
+        </div>
+        <div class="product-info">
+          <h3>Beef Tapa</h3>
+          <p>Classic savory beef tapa with rice.</p>
+          <strong>₱120</strong>
+          <button class="button button-primary add-to-cart" data-id="14">Add to Cart</button>
+        </div>
+      </article>
 
-        <article class="product-card" data-name="Rose Matcha Latte">
-          <div class="product-image">
-            <img src="rose.jpg" alt="Rose Matcha Latte">
-            <span class="product-tag">Floral</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Rose Matcha Latte</h3>
-              <span class="price">₱265</span>
-            </div>
-            <p>A floral-inspired latte that pairs the earthy character of matcha with the delicate and elegant idea of rose flavor.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+      <article class="product-card" data-name="Adobo">
+        <div class="product-art">
+          <img src="adobo.jpg" alt="Adobo">
+        </div>
+        <div class="product-info">
+          <h3>Adobo</h3>
+          <p>Filipino-style adobo served with rice.</p>
+          <strong>₱120</strong>
+          <button class="button button-primary add-to-cart" data-id="15">Add to Cart</button>
+        </div>
+      </article>
 
-        <article class="product-card" data-name="Signature TMH Matcha">
-          <div class="product-image">
-            <img src="signature.jpg" alt="Signature TMH Matcha">
-            <span class="product-tag">Signature</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Signature TMH Matcha</h3>
-              <span class="price">₱265</span>
-            </div>
-            <p>A signature-named selection from The Matcha House menu, perfect for customers who want to explore one of the shop's featured matcha choices.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+      <article class="product-card" data-name="Tocino">
+        <div class="product-art">
+          <img src="tocino.jpg" alt="Tocino">
+        </div>
+        <div class="product-info">
+          <h3>Tocino</h3>
+          <p>Sweet and tender tocino with rice.</p>
+          <strong>₱120</strong>
+          <button class="button button-primary add-to-cart" data-id="16">Add to Cart</button>
+        </div>
+      </article>
 
-        <article class="product-card" data-name="Strawberry Matcha Coconut Cloud">
-          <div class="product-image">
-            <img src="strawberry.jpg" alt="Strawberry Matcha Coconut Cloud">
-            <span class="product-tag">Fruity Cloud</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Strawberry Matcha Coconut Cloud</h3>
-              <span class="price">₱265</span>
-            </div>
-            <p>A fruity-inspired combination of strawberry, matcha, and coconut-cloud flavors, bringing a colorful twist to a matcha drink.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+      <article class="product-card" data-name="Hotdog">
+        <div class="product-art">
+          <img src="hotdog.jpg" alt="Hotdog">
+        </div>
+        <div class="product-info">
+          <h3>Hotdog</h3>
+          <p>A simple and delicious hotdog rice meal.</p>
+          <strong>₱100</strong>
+          <button class="button button-primary add-to-cart" data-id="17">Add to Cart</button>
+        </div>
+      </article>
 
-        <article class="product-card" data-name="Strawberry Matcha Latte">
-          <div class="product-image">
-            <img src="strawberry latte.jpg" alt="Strawberry Matcha Latte">
-            <span class="product-tag">Fruity</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Strawberry Matcha Latte</h3>
-              <span class="price">₱255</span>
-            </div>
-            <p>A colorful latte-style drink combining the earthy taste of matcha with the sweet, fruity character of strawberry.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+      <article class="product-card" data-name="Longganisa">
+        <div class="product-art">
+          <img src="longganisa.jpg" alt="Longganisa">
+        </div>
+        <div class="product-info">
+          <h3>Longganisa</h3>
+          <p>Filipino longganisa served with rice.</p>
+          <strong>₱120</strong>
+          <button class="button button-primary add-to-cart" data-id="18">Add to Cart</button>
+        </div>
+      </article>
 
-        <article class="product-card" data-name="Ube Matcha Latte">
-          <div class="product-image">
-            <img src="ube.jpg" alt="Ube Matcha Latte">
-            <span class="product-tag">Local-Inspired</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Ube Matcha Latte</h3>
-              <span class="price">₱255</span>
-            </div>
-            <p>A colorful matcha latte inspired by the sweet, distinctive flavor of ube, offering a creative twist on a familiar drink.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+    </div>
+  </section>
 
-        <article class="product-card" data-name="Usucha">
-          <div class="product-image">
-            <img src="usucha.jpeg" alt="Usucha">
-            <span class="product-tag">Traditional</span>
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>Usucha</h3>
-              <span class="price">₱180</span>
-            </div>
-            <p>A traditional Japanese-style thin matcha, appreciated for its simple presentation and the distinctive character of green tea.</p>
-            <a class="text-link" href="contact.html">Ask About This Drink ↗</a>
-          </div>
-        </article>
+  <!-- PASTA -->
+  <section class="menu-category" id="pasta">
+    <h2>Pasta</h2>
+    <div class="product-grid">
 
-      </div>
+      <article class="product-card" data-name="Classic Spaghetti">
+        <div class="product-art">
+          <img src="classic-spaghetti.jpg" alt="Classic Spaghetti">
+        </div>
+        <div class="product-info">
+          <h3>Classic Spaghetti</h3>
+          <p>Classic spaghetti with rich tomato sauce.</p>
+          <strong>₱110</strong>
+          <button class="button button-primary add-to-cart" data-id="19">Add to Cart</button>
+        </div>
+      </article>
 
-      <p id="noResults" class="no-results" hidden>
-        No matching drinks found. Try another name.
-      </p>
+      <article class="product-card" data-name="Spicy Chicken Pasta">
+        <div class="product-art">
+          <img src="spicy-chicken-pasta.jpg" alt="Spicy Chicken Pasta">
+        </div>
+        <div class="product-info">
+          <h3>Spicy Chicken Pasta</h3>
+          <p>Pasta with chicken and a spicy sauce.</p>
+          <strong>₱130</strong>
+          <button class="button button-primary add-to-cart" data-id="20">Add to Cart</button>
+        </div>
+      </article>
 
-      <div class="menu-note">
-        <strong>Menu reminder:</strong>
-        Prices are based on the list provided for this website project.
-        Please confirm current prices and availability with the shop.
-        Drink descriptions are illustrative and should be checked against the actual recipes.
-      </div>
+      <article class="product-card" data-name="Tuna Pasta">
+        <div class="product-art">
+          <img src="tuna-pasta.jpg" alt="Tuna Pasta">
+        </div>
+        <div class="product-info">
+          <h3>Tuna Pasta</h3>
+          <p>A tasty pasta dish with tuna.</p>
+          <strong>₱130</strong>
+          <button class="button button-primary add-to-cart" data-id="21">Add to Cart</button>
+        </div>
+      </article>
 
-      <div class="center-button">
-        <a class="btn btn-primary" href="contact.html">Contact the Shop ↗</a>
-      </div>
+      <article class="product-card" data-name="Bacon Broccoli in White Sauce">
+        <div class="product-art">
+          <img src="bacon-broccoli-white-sauce.jpg" alt="Bacon Broccoli in White Sauce">
+        </div>
+        <div class="product-info">
+          <h3>Bacon Broccoli in White Sauce</h3>
+          <p>Creamy white sauce pasta with bacon and broccoli.</p>
+          <strong>₱130</strong>
+          <button class="button button-primary add-to-cart" data-id="22">Add to Cart</button>
+        </div>
+      </article>
 
-    </section>
-  </main>
+      <article class="product-card" data-name="Chinese Beef Lomi">
+        <div class="product-art">
+          <img src="chinese-beef-lomi.jpg" alt="Chinese Beef Lomi">
+        </div>
+        <div class="product-info">
+          <h3>Chinese Beef Lomi</h3>
+          <p>Warm and hearty beef lomi noodles.</p>
+          <strong>₱130</strong>
+          <button class="button button-primary add-to-cart" data-id="23">Add to Cart</button>
+        </div>
+      </article>
 
-  <footer class="footer">
-    <a class="footer-brand" href="index.html">🍵 yUP's The Matcha House</a>
-    <p>Discover your matcha moment in Lucena City.</p>
+      <article class="product-card" data-name="Chinese Chicken Lomi">
+        <div class="product-art">
+          <img src="chinese-chicken-lomi.jpg" alt="Chinese Chicken Lomi">
+        </div>
+        <div class="product-info">
+          <h3>Chinese Chicken Lomi</h3>
+          <p>Comforting chicken lomi noodles.</p>
+          <strong>₱130</strong>
+          <button class="button button-primary add-to-cart" data-id="24">Add to Cart</button>
+        </div>
+      </article>
 
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="products.html">Our Menu</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
+    </div>
+  </section>
+
+  <!-- PIKA-PIKA AND SANDWICHES -->
+  <section class="menu-category" id="pika-pika">
+    <h2>Pika-Pika & Sandwiches</h2>
+    <div class="product-grid">
+
+      <article class="product-card" data-name="Crispy Chicken Fillet Sandwich">
+        <div class="product-art">
+          <img src="crispy-chicken-fillet-sandwich.jpg" alt="Crispy Chicken Fillet Sandwich">
+        </div>
+        <div class="product-info">
+          <h3>Crispy Chicken Fillet Sandwich</h3>
+          <p>Crispy chicken fillet in a soft sandwich.</p>
+          <strong>₱100</strong>
+          <button class="button button-primary add-to-cart" data-id="25">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-name="Tuna Sandwich">
+        <div class="product-art">
+          <img src="tuna-sandwich.jpg" alt="Tuna Sandwich">
+        </div>
+        <div class="product-info">
+          <h3>Tuna Sandwich</h3>
+          <p>A tasty sandwich filled with tuna.</p>
+          <strong>₱100</strong>
+          <button class="button button-primary add-to-cart" data-id="26">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-name="French Fries Plain">
+        <div class="product-art">
+          <img src="french-fries-plain.jpg" alt="French Fries Plain">
+        </div>
+        <div class="product-info">
+          <h3>French Fries - Plain</h3>
+          <p>Classic crispy and golden fries.</p>
+          <strong>₱70</strong>
+          <button class="button button-primary add-to-cart" data-id="27">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-name="French Fries Cheese">
+        <div class="product-art">
+          <img src="french-fries-cheese.jpg" alt="French Fries Cheese">
+        </div>
+        <div class="product-info">
+          <h3>French Fries - Cheese</h3>
+          <p>Crispy fries with cheesy seasoning.</p>
+          <strong>₱70</strong>
+          <button class="button button-primary add-to-cart" data-id="28">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-name="French Fries BBQ">
+        <div class="product-art">
+          <img src="french-fries-bbq.jpg" alt="French Fries BBQ">
+        </div>
+        <div class="product-info">
+          <h3>French Fries - BBQ</h3>
+          <p>Golden fries with barbecue flavor.</p>
+          <strong>₱70</strong>
+          <button class="button button-primary add-to-cart" data-id="29">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-name="French Fries Sour and Cream">
+        <div class="product-art">
+          <img src="french-fries-sour-cream.jpg" alt="French Fries Sour and Cream">
+        </div>
+        <div class="product-info">
+          <h3>French Fries - Sour & Cream</h3>
+          <p>Crispy fries with sour cream seasoning.</p>
+          <strong>₱70</strong>
+          <button class="button button-primary add-to-cart" data-id="30">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-name="Chicharap">
+        <div class="product-art">
+          <img src="chicharap.jpg" alt="Chicharap">
+        </div>
+        <div class="product-info">
+          <h3>Chicharap</h3>
+          <p>A crunchy snack for sharing.</p>
+          <strong>₱70</strong>
+          <button class="button button-primary add-to-cart" data-id="31">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-name="Beef Nachos">
+        <div class="product-art">
+          <img src="beef-nachos.jpg" alt="Beef Nachos">
+        </div>
+        <div class="product-info">
+          <h3>Beef Nachos</h3>
+          <p>Crunchy nachos topped with beef.</p>
+          <strong>₱200</strong>
+          <button class="button button-primary add-to-cart" data-id="32">Add to Cart</button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <p id="noResults" class="empty-message" hidden>
+    No menu items found. Try another search.
+  </p>
+
+</main>
+
+<!-- CART BACKDROP -->
+<div class="cart-backdrop" id="cartBackdrop"></div>
+
+<!-- SHOPPING CART -->
+<aside class="cart-panel" id="cartPanel" aria-label="Shopping cart">
+
+  <div class="cart-heading">
+    <div>
+      <span class="eyebrow">YOUR ORDER</span>
+      <h2>Shopping Cart</h2>
+    </div>
+    <button id="closeCart" class="icon-button" type="button"
+      aria-label="Close cart">×</button>
+  </div>
+
+  <div id="cartItems" class="cart-items">
+    <p class="empty-cart">Your cart is empty. Add something delicious!</p>
+  </div>
+
+  <div class="cart-summary">
+    <div class="subtotal-line">
+      <span>Subtotal</span>
+      <strong id="cartSubtotal">₱0.00</strong>
     </div>
 
-    <p class="copyright">
-      Student website project · Please verify menu details with the shop.
+    <p class="cart-hint">
+      Please confirm item availability and your order with the shop.
     </p>
-  </footer>
 
-  
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const searchInput = document.getElementById("menuSearch");
-  const productGrid = document.getElementById("productGrid");
-  const noResults = document.getElementById("noResults");
+    <button class="button button-primary checkout-button"
+      id="checkoutButton" type="button">
+      Prepare Order
+    </button>
 
-  if (!searchInput || !productGrid) {
-    console.error("Search input or product grid was not found.");
-    return;
-  }
+    <button class="text-button" id="clearCart" type="button">
+      Clear cart
+    </button>
 
-  const products = Array.from(
-    productGrid.querySelectorAll(".product-card")
-  );
+    <p id="checkoutMessage" class="checkout-message"
+      aria-live="polite"></p>
+  </div>
 
-  function searchDrinks() {
-    const searchText = searchInput.value
-      .toLowerCase()
-      .trim();
+</aside>
 
-    let found = 0;
+<footer class="site-footer">
+  <a class="footer-brand" href="index.html">
+    🍨 Ben's Halo-Halo Lucena
+  </a>
+  <p>Thanks for choosing Ben's!</p>
 
-    products.forEach(function (product) {
-      const name = (
-        product.dataset.name ||
-        product.querySelector("h3")?.textContent ||
-        ""
-      ).toLowerCase();
+  <div class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
 
-      const description = (
-        product.querySelector("p")?.textContent || ""
-      ).toLowerCase();
-
-      const matches =
-        name.includes(searchText) ||
-        description.includes(searchText);
-
-      product.style.display = matches ? "" : "none";
-
-      if (matches) {
-        found++;
-      }
-    });
-
-    if (noResults) {
-      noResults.hidden = found !== 0;
-    }
-  }
-
-  searchInput.addEventListener("input", searchDrinks);
-  searchDrinks();
-});
-</script>
 </body>
 </html>
+```
